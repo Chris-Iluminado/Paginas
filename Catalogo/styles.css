@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ff7572;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0 20px;
+    font-size: 2.5em;
+}
+
+header img.fuego {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+/* Asegura que las imágenes y el texto estén alineados verticalmente */
+header h1, 
+header img.fuego {
+    vertical-align: middle;
+}
+
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-bottom: 50px; /* Añadido para más espacio al final */
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h2 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+}
+
+.precio {
+    font-size: 1.2em;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.boton-agregar {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.boton-agregar:hover {
+    background-color: #d35400;
+}
+
+@media (max-width: 768px) {
+    .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste para pantallas más pequeñas */
+    }
+}
